@@ -1,12 +1,23 @@
-*{
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+
+html,
 body {
   background-color: rgb(41, 41, 41);
   min-width: 320px;
   min-height: 100vh;
   color: #fff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
