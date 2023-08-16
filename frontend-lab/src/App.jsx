@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { HeaderScreen } from "./components/Header/HeaderScreen";
 import { Home } from "./components/Home/Home";
+import { EmployeeForm } from './components/Forms/EmployeeForm/EmployeeForm';
 import { AboutScreen } from "./components/About/AboutScreen";
 import { ClientScreen } from "./components/LabClients/ClientScreen";
 import { ServiceScreen } from "./components/LabServices/ServiceScreen";
@@ -13,6 +14,7 @@ function App() {
       <main className="page">
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/admin" element={<EmployeeForm />}></Route>
           <Route path="/about" element={<AboutScreen />}></Route>
           <Route path="/services" element={<ServiceScreen />}></Route>
           <Route path="/clients" element={<ClientScreen />}></Route>
