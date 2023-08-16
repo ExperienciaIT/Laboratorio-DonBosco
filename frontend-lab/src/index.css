@@ -1,0 +1,15 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(41, 41, 41);
+  min-width: 320px;
+  min-height: 100vh;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
