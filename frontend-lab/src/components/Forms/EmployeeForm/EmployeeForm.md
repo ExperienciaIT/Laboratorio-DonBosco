@@ -11,7 +11,7 @@
 - Adicionalmente
 
   - ✔ Fecha de creacion de usuario (registro automatico)
-  - Nombre de quien crea el usuario (registro automatico)
+  - ✔ Nombre de quien crea el usuario (registro automatico)
 
 - Tareas
 

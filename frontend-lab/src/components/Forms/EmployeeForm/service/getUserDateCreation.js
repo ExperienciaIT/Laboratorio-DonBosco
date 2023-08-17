@@ -7,6 +7,8 @@ export const getUserDateCreation = () => {
   const hours = creationDate.getHours() < 10 ? '0' + creationDate.getHours() : creationDate.getHours()
   const minutes = creationDate.getMinutes() < 10 ? '0' + creationDate.getMinutes() : creationDate.getMinutes()
   const time = `${hours}:${minutes}`
+  // El nombre de la persona que creo el nuevo usuario/empleado
+  const creator = 'Administrador'
   // Mensaje final fecha de creación del usuario
-  return { date, month, year, time }
+  return { date, month, year, time, creator }
 }
