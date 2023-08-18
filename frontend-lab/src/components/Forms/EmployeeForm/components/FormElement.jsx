@@ -3,8 +3,8 @@ import styles from '../EmployeeForm.module.css'
 export const FormElement = ({ onSubmit }) => {
   return (
     <form action='#' className={styles.form} onSubmit={onSubmit}>
-      <label htmlFor='nombre' className={styles.label}>
-        <h4 className={styles.data}>Nombre</h4>
+      <div className={styles.fieldContainer}>
+        <label htmlFor='nombre' className={styles.labelDescription}>Nombre</label>
         <input
           name='nombre'
           type='text'
@@ -12,9 +12,9 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
-      </label>
-      <label htmlFor='apellido' className={styles.label}>
-        <h4 className={styles.data}>Apellido</h4>
+      </div>
+      <div className={styles.fieldContainer}>
+        <label htmlFor='apellido' className={styles.labelDescription}>Apellido</label>
         <input
           name='apellido'
           type='text'
@@ -22,9 +22,9 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
-      </label>
-      <label htmlFor='dni' className={styles.label}>
-        <h4 className={styles.data}>DNI</h4>
+      </div>
+      <div className={`${styles.fieldContainer} ${styles.dniFieldContainer}`}>
+        <label htmlFor='dni' className={styles.labelDescription}>DNI</label>
         <input
           name='dni'
           type='number'
@@ -32,29 +32,9 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
-      </label>
-      <label htmlFor='rol' className={styles.label}>
-        <h4 className={styles.data}>Rol a Desempeñar</h4>
-        <input
-          name='rol'
-          type='text'
-          placeholder='Secretaria'
-          className={styles.input}
-          required
-        />
-      </label>
-      <label htmlFor='area' className={styles.label}>
-        <h4 className={styles.data}>Area de Trabajo</h4>
-        <input
-          name='area'
-          type='text'
-          placeholder='Laboratorio'
-          className={styles.input}
-          required
-        />
-      </label>
-      <label htmlFor='email' className={styles.label}>
-        <h4 className={styles.data}>Correo Electronico</h4>
+      </div>
+      <div className={`${styles.fieldContainer} ${styles.emailFieldContainer}`}>
+        <label htmlFor='email' className={styles.labelDescription}>Correo Electrónico</label>
         <input
           name='email'
           type='email'
@@ -62,7 +42,27 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
-      </label>
+      </div>
+      <div className={styles.fieldContainer}>
+        <label htmlFor='rol' className={styles.labelDescription}>Rol a Desempeñar</label>
+        <input
+          name='rol'
+          type='text'
+          placeholder='Secretaria'
+          className={styles.input}
+          required
+        />
+      </div>
+      <div className={styles.fieldContainer}>
+        <label htmlFor='area' className={styles.labelDescription}>Área de Trabajo</label>
+        <input
+          name='area'
+          type='text'
+          placeholder='Laboratorio'
+          className={styles.input}
+          required
+        />
+      </div>
       <button type='submit' className={styles.btnSubmit}>
         Crear Usuario
       </button>

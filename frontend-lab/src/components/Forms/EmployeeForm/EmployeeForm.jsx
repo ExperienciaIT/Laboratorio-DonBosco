@@ -13,10 +13,10 @@ export const EmployeeForm = () => {
     setError(messageBox)
   }
   return (
-    <>
+    <div className={styles.employeeFormContainer}>
       <header className={styles.header}>
-        <h1>Panel de Admin</h1>
-        <h2>Creación de Usuarios/Empleados</h2>
+        <h2>Panel de Admin</h2>
+        <h3>Creación de Usuarios/Empleados</h3>
       </header>
       <main className={styles.main}>
         <FormElement onSubmit={onSubmit} />
@@ -24,6 +24,6 @@ export const EmployeeForm = () => {
           {error}
         </section>
       </main>
-    </>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 /*
 NOMBRES Y APELLIDOS COMPLETOS
@@ -18,34 +18,34 @@ EDAD (Calculada automáticamente)
 
 export const ClientForm = () => {
   const [userData, setUserData] = useState({
-    nombres: "",
-    apellidos: "",
-    dni: "",
-    fechaNacimiento: "",
-    numCelular: "",
-    direccion: "",
-    correo: "",
-    prestador: "",
-    numAfiliado: "",
-    /* fechaCreacion: new Date().toLocaleDateString(),  sino, que lo añadan desde al back a la DB usando los models. ej: usando el temp{}*/
-  });
+    nombres: '',
+    apellidos: '',
+    dni: '',
+    fechaNacimiento: '',
+    numCelular: '',
+    direccion: '',
+    correo: '',
+    prestador: '',
+    numAfiliado: ''
+    /* fechaCreacion: new Date().toLocaleDateString(),  sino, que lo añadan desde al back a la DB usando los models. ej: usando el temp{} */
+  })
 
-  const [isRegistered, setRegister] = useState(false);
+  const [isRegistered, setRegister] = useState(false)
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setUserData((prevData) => ({
       ...prevData,
-      [name]: value,
-    }));
-  };
+      [name]: value
+    }))
+  }
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    //dispatch al back
-    setRegister(true);
-    console.log(userData);
-  };
+    e.preventDefault()
+    // dispatch al back
+    setRegister(true)
+    console.log(userData)
+  }
 
   return (
     <section>
@@ -61,41 +61,41 @@ export const ClientForm = () => {
         <label>
           Nombres:
           <input
-            type="text"
-            name="nombres"
+            type='text'
+            name='nombres'
             value={userData.nombres}
             onChange={handleChange}
-            placeholder="Ejemplo: Fulano"
+            placeholder='Ejemplo: Fulano'
             required
           />
         </label>
         <label>
           Apellidos:
           <input
-            type="text"
-            name="apellidos"
+            type='text'
+            name='apellidos'
             value={userData.apellidos}
             onChange={handleChange}
-            placeholder="Ejemplo: DeTal"
+            placeholder='Ejemplo: DeTal'
             required
           />
         </label>
         <label>
           DNI:
           <input
-            type="number"
-            name="dni"
+            type='number'
+            name='dni'
             value={userData.dni}
             onChange={handleChange}
-            placeholder="Ejemplo: 12345678"
+            placeholder='Ejemplo: 12345678'
             required
           />
         </label>
         <label>
           Fecha de Nacimiento:
           <input
-            type="date"
-            name="fechaNacimiento"
+            type='date'
+            name='fechaNacimiento'
             value={userData.fechaNacimiento}
             onChange={handleChange}
             required
@@ -104,63 +104,63 @@ export const ClientForm = () => {
         <label>
           Celular:
           <input
-            type="tel"
-            name="numCelular"
+            type='tel'
+            name='numCelular'
             value={userData.numCelular}
             onChange={handleChange}
-            placeholder="Ejemplo: +541234567890"
+            placeholder='Ejemplo: +541234567890'
             required
           />
         </label>
         <label>
           Dirección:
           <input
-            type="text"
-            name="direccion"
+            type='text'
+            name='direccion'
             value={userData.direccion}
             onChange={handleChange}
-            placeholder="Ejemplo: Calle 123"
+            placeholder='Ejemplo: Calle 123'
             required
           />
         </label>
         <label>
           Correo Electrónico:
           <input
-            type="email"
-            name="correo"
+            type='email'
+            name='correo'
             value={userData.correo}
             onChange={handleChange}
-            placeholder="Ejemplo: ejemplo@gmail.com"
+            placeholder='Ejemplo: ejemplo@gmail.com'
             required
           />
         </label>
         <label>
           Prestador:
           <input
-            type="text"
-            name="prestador"
+            type='text'
+            name='prestador'
             value={userData.prestador}
             onChange={handleChange}
-            placeholder="Ejemplo: Obra Social"
+            placeholder='Ejemplo: Obra Social'
             required
           />
         </label>
         <label>
           Número de Afiliado:
           <input
-            type="text"
-            name="numAfiliado"
+            type='text'
+            name='numAfiliado'
             value={userData.numAfiliado}
             onChange={handleChange}
-            placeholder="Ejemplo: 12345"
+            placeholder='Ejemplo: 12345'
             required
           />
         </label>
 
-        <button type="submit">Registrarse</button>
+        <button type='submit'>Registrarse</button>
 
         {isRegistered && <h1>!USUARIO REGISTRADO¡</h1>}
       </form>
     </section>
-  );
-};
+  )
+}
