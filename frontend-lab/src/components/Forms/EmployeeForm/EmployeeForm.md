@@ -43,8 +43,8 @@
 - ✔ Confirmar que el campo de correo electrónico tenga un formato válido
 - ✔ Mostrarle el resultado de la validación al cliente mediante mensajes
 - Verificacion del formato de correo mediante regex
-- Generar automaticamente un nombre de usuario y contraseña
-- Enviar los datos al correo del nuevo empleado
+- ✔ Generar automaticamente un nombre de usuario y contraseña
+- Enviar los datos al correo del nuevo empleado (Framework Resent - Necesidad de una API-KEY)
 - Permitir la actualización de roles y detalles de usuario
 - Control de inactivación de usuarios que ya no trabajan en el laboratorio
 
@@ -57,25 +57,32 @@
 ## <font color="#efadff">Casos de Prueba - Testing</font>
 
 - ✔ Escenario de Prueba 1:
-> El sistema registra la información correctamente y muestra un mensaje de confirmación de la creación del usuario.
+
+  > El sistema registra la información correctamente y muestra un mensaje de confirmación de la creación del usuario.
 
 - ✔ Escenario de Prueba 2:
-> El sistema muestra un mensaje de error indicando los campos que faltan por completar.
+
+  > El sistema muestra un mensaje de error indicando los campos que faltan por completar.
 
 - ✔ Escenario de Prueba 3:
-> El sistema muestra un mensaje de error indicando que el formato del DNI es incorrecto.
+
+  > El sistema muestra un mensaje de error indicando que el formato del DNI es incorrecto.
 
 - ✔ Escenario de Prueba 4:
-> El sistema registra la información correctamente para los campos válidos, pero muestra un mensaje de advertencia indicando que el correo electrónico tiene un formato incorrecto.
+
+  > El sistema registra la información correctamente para los campos válidos, pero muestra un mensaje de advertencia indicando que el correo electrónico tiene un formato incorrecto.
 
 - Escenario de Prueba 5:
-> El empleado recibe un correo electrónico de confirmación de creación de usuario en la plataforma, con la información de la fecha de creación y el nombre de quien realizó la creación.
+
+  > El empleado recibe un correo electrónico de confirmación de creación de usuario en la plataforma, con la información de la fecha de creación y el nombre de quien realizó la creación.
 
 - Escenario de Prueba 6:
-> El sistema muestra un mensaje de error indicando que el usuario ya ha sido creado.
+
+  > El sistema muestra un mensaje de error indicando que el usuario ya ha sido creado.
 
 - ✔ Escenario de Prueba 7:
-> Los campos de fecha de creación y nombre de quien creó el usuario están registrados automáticamente y son correctos.
+
+  > Los campos de fecha de creación y nombre de quien creó el usuario están registrados automáticamente y son correctos.
 
 - ✔ Escenario de Prueba 8:
-> El sistema registra correctamente el rol y el área del laboratorio asociados al usuario.
+  > El sistema registra correctamente el rol y el área del laboratorio asociados al usuario.

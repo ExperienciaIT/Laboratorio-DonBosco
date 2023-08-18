@@ -8,8 +8,8 @@ export const EmployeeForm = () => {
   // Al enviar el formulario valida cada uno de los campos
   const onSubmit = (event) => {
     event.preventDefault()
-    const { messageBox, userDateCreation } = validateFields(event)
-    console.log(userDateCreation)
+    const { messageBox, userDataAutoGenerate } = validateFields(event)
+    console.log(userDataAutoGenerate)
     setError(messageBox)
   }
   return (

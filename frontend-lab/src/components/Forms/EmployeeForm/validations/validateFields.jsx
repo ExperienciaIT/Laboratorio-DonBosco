@@ -5,7 +5,7 @@ import { validateDni } from './validateDni'
 import { validateJobPositionAndWorkArea } from './validateJobAndArea'
 import { validateEmail } from './validateEmail'
 // Obtener fecha de creacion de usuario
-import { getUserDateCreation } from '../service/getUserDateCreation'
+import { getNewUserData } from '../service/getNewUserData'
 
 export const validateFields = (event) => {
   const formData = new FormData(event.target) // Prototype Formulario con la informacion de los inputs
@@ -29,9 +29,9 @@ export const validateFields = (event) => {
   if (listOfErrors.every((element) => element === undefined)) {
     const successMessage = 'El usuario se ha creado con exito'
     const messageBox = <Message message={successMessage} error={false} />
-    const userDateCreation = getUserDateCreation()
-    return { messageBox, userDateCreation }
+    const userDataAutoGenerate = getNewUserData(formData)
+    return { messageBox, userDataAutoGenerate }
   }
   const errorMessage = 'Validar los campos'
-  return { messageBox: listOfErrors, userDateCreation: errorMessage }
+  return { messageBox: listOfErrors, userDataAutoGenerate: errorMessage }
 }
