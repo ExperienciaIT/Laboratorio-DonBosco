@@ -7,7 +7,7 @@ import { ServiceScreen } from "./components/LabServices/ServiceScreen";
 import { EmployeeScreen } from "./components/LabEmployees/EmployeeScreen";
 /* imports temporales */
 import { LoginScreen } from "./components/Login/LoginScreen";
-import { PasswordForm } from "./components/Forms/PasswordForm";
+import { PasswordScreen } from "./components/Password/PasswordScreen";
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
           <Route path="/employees" element={<EmployeeScreen />}></Route>
           {/* Rutas para visibilizar los formularios, todavia no hay rutas protegidas !! */}
           <Route path="/login" element={<LoginScreen />}></Route>
-          <Route path="/password" element={<PasswordForm />}></Route>
+          <Route path="/password" element={<PasswordScreen />}></Route>
         </Routes>
       </main>
     </>
