@@ -8,7 +8,12 @@ export const name_validation = {
     validation: {
         required: {
             value: true,
-            message: 'required',
+            message: 'name required',
+        },
+        pattern: {
+            value: /^[A-Za-z]+[\w._%+-]+[^0-9]$/,
+            message: 'only letters',
+
         },
         minLength: {
             value: 10,
@@ -21,7 +26,6 @@ export const name_validation = {
     },
 }
 
-
 export const password_validation = {
     name: 'password',
     label: 'password',
@@ -31,13 +35,12 @@ export const password_validation = {
     validation: {
         required: {
             value: true,
-            message: 'required',
+            message: 'password required',
         },
         pattern: {
-            //only numbers and 8 digits maximun
-            value: /[0-9]/i,
+            value: /^[0-9][\w._%+-]+[^A-Za-z]+[0-9]$/,
             message: 'only numbers',
-        },       
+        },
         minLength: {
             value: 8,
             message: 'min 8 digitos',

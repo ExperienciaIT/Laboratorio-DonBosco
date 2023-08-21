@@ -26,8 +26,8 @@ export const Input = ({ label, type, id, placeholder, validation, name }) => {
         </label>
       </div>
       <input
+        id={id}
         type={type}
-        name={name}
         className={inputStyle}
         placeholder={placeholder}
         {...register(name, validation)}

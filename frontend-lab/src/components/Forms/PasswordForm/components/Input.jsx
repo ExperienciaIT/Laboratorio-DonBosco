@@ -4,7 +4,7 @@ import { useFormContext } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import { MdError } from "react-icons/md";
 
-export const Input = ({ label, type, id, placeholder, validation, name }) => {
+export const Input = ({ label, type, id, placeholder, validation, name }) => { 
   const {
     register,
     formState: { errors },
@@ -26,6 +26,7 @@ export const Input = ({ label, type, id, placeholder, validation, name }) => {
         </label>
       </div>
       <input
+        id={id}
         type={type}
         className={inputStyle}
         placeholder={placeholder}

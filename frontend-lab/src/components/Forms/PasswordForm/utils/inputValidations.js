@@ -1,20 +1,18 @@
-
-export const password_validation = {
-    name: 'password',
-    label: 'password',
-    type: 'password',
-    id: 'password',
+export const password_validation1 = {
+    name: 'password1',
+    label: 'password1',
+    type: 'password1',
+    id: 'password1',
     placeholder: 'type 8 digits password ...',
     validation: {
         required: {
             value: true,
-            message: 'required',
+            message: 'password 1 required',
         },
         pattern: {
-            //only numbers and 8 digits maximun
-            value: /[0-9]/i,          
+            value: /^[0-9][\w._%+-]+[^A-Za-z]+[0-9]$/,
             message: 'only numbers',
-        },   
+        },
         minLength: {
             value: 8,
             message: 'min 8 digitos',
@@ -25,17 +23,28 @@ export const password_validation = {
         },
     },
 }
-
-export const num_validation = {
-    name: 'num',
-    label: 'number',
-    type: 'number',
-    id: 'num',
-    placeholder: 'write a random number',
+export const password_validation2 = {
+    name: 'password2',
+    label: 'password2',
+    type: 'password2',
+    id: 'password2',
+    placeholder: 'type 8 digits password ...',
     validation: {
         required: {
             value: true,
-            message: 'required',
+            message: 'password 2 required',
+        },
+        pattern: {
+            value: /^[0-9][\w._%+-]+[^A-Za-z]+[0-9]$/,
+            message: 'only numbers',
+        },
+        minLength: {
+            value: 8,
+            message: 'min 8 digitos',
+        },
+        maxLength: {
+            value: 10,
+            message: 'max 10 digitos',
         },
     },
 }

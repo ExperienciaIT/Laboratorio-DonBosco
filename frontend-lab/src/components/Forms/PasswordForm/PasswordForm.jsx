@@ -1,7 +1,7 @@
 import { Input } from "../PasswordForm/components";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { password_validation } from "./utils/inputValidations";
+import { password_validation1, password_validation2 } from "./utils/inputValidations";
 import { GrMail } from "react-icons/gr";
 import { BsFillCheckSquareFill } from "react-icons/bs";
 /*
@@ -34,8 +34,8 @@ export const PasswordForm = () => {
         className="container d-flex flex-column justify-content-center align-items-center p-5 rounded"
       >
         <div className="d-grid gap-4 w-50">
-          <Input {...password_validation} />
-          <Input {...password_validation} />
+          <Input {...password_validation1} />
+          <Input {...password_validation2} />
         </div>
         <div className="mt-5">
           {success && (
