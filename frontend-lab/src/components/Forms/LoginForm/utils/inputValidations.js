@@ -11,7 +11,7 @@ export const name_validation = {
             message: 'name required',
         },
         pattern: {
-            value: /^[A-Za-z]+[\w._%+-]+[^0-9]$/,
+            value: /^[^0-9][A-Za-z]+[^0-9][\w._%+-][^0-9]$/,
             message: 'only letters',
 
         },
