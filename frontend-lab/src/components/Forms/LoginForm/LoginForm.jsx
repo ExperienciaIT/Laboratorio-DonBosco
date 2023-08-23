@@ -15,8 +15,8 @@ export const LoginForm = () => {
 
   const onSubmit = methods.handleSubmit((data) => {
     console.log(data);
-    methods.reset();
     setSuccess(true);
+    methods.reset();
   });
 
   return (
@@ -35,17 +35,17 @@ export const LoginForm = () => {
         <div className="mt-5">
           {success && (
             <p className="d-flex align-items-center gap-1 mb-5 fw-semibold text-success">
-              <BsFillCheckSquareFill /> Form has been submitted successfully
+              <BsFillCheckSquareFill /> El formulario se envió con éxito.
             </p>
           )}
-          <button
-            onClick={onSubmit}
-            className="d-flex align-items-center gap-1 p-2 fw-semibold text-light bg-primary rounded"
-          >
-            <GrMail />
-            Submit Form
-          </button>
         </div>
+        <button
+          onClick={onSubmit}
+          className="d-flex align-items-center gap-1 p-2 fw-semibold text-light bg-primary rounded"
+        >
+          <GrMail />
+          Submit Form
+        </button>
       </form>
     </FormProvider>
   );

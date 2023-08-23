@@ -4,24 +4,24 @@ export const name_validation = {
     label: 'name',
     type: 'text',
     id: 'name',
-    placeholder: 'write your name ...',
+    placeholder: 'Ingrese su nombre ...',
     validation: {
         required: {
             value: true,
-            message: 'name required',
+            message: 'el nombre es requerido',
         },
         pattern: {
             value: /^[^0-9][A-Za-z]+[^0-9][\w._%+-][^0-9]$/,
-            message: 'only letters',
+            message: 'solo caracteres',
 
         },
         minLength: {
             value: 10,
-            message: '10 characters min',
+            message: 'minimo 10 caracteres',
         },
         maxLength: {
             value: 15,
-            message: '15 characters max',
+            message: 'maximo 20 caracteres',
         },
     },
 }
@@ -31,23 +31,23 @@ export const password_validation = {
     label: 'password',
     type: 'password',
     id: 'password',
-    placeholder: 'type 8 digits password ...',
+    placeholder: 'Ingrese la contraseña ...',
     validation: {
         required: {
             value: true,
-            message: 'password required',
+            message: 'la contraseña es requerida',
         },
         pattern: {
             value: /^[0-9][\w._%+-]+[^A-Za-z]+[0-9]$/,
-            message: 'only numbers',
+            message: 'solo numeros',
         },
         minLength: {
             value: 8,
-            message: 'min 8 digitos',
+            message: 'minimo 8 digitos',
         },
         maxLength: {
             value: 10,
-            message: 'max 10 digitos',
+            message: 'maximo 10 digitos',
         },
     },
 }

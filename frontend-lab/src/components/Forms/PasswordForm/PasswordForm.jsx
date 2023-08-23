@@ -62,14 +62,14 @@ export const PasswordForm = () => {
               nuevamente.
             </p>
           )}
-          <button
-            onClick={onSubmit}
-            className="d-flex align-items-center gap-1 p-2 fw-semibold text-light bg-primary rounded"
-          >
-            <GrMail />
-            Enviar
-          </button>
         </div>
+        <button
+          onClick={onSubmit}
+          className="d-flex align-items-center gap-1 p-2 fw-semibold text-light bg-primary rounded"
+        >
+          <GrMail />
+          Enviar
+        </button>
       </form>
     </FormProvider>
   );
