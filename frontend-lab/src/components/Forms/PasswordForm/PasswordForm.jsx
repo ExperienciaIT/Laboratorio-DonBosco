@@ -1,9 +1,13 @@
 import { Input } from "../PasswordForm/components";
 import { useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
-import { password_validation1, password_validation2 } from "./utils/inputValidations";
+import {
+  password_validation1,
+  password_validation2,
+} from "./utils/inputValidations";
 import { GrMail } from "react-icons/gr";
 import { BsFillCheckSquareFill } from "react-icons/bs";
+
 /*
 El empleado recibirá a su correo electrónico registrado, un mensaje automático 
 para habilitar su ingreso, pidiendo asignar una clave.
@@ -17,11 +21,20 @@ REPETIR CONTRASEÑA
 export const PasswordForm = () => {
   const methods = useForm();
   const [success, setSuccess] = useState(false);
+  const [unsuccess, setUnSuccess] = useState(false);
 
   const onSubmit = methods.handleSubmit((data) => {
-    console.log(data);
-    methods.reset();
-    setSuccess(true);
+    if (parseInt(data.password1) === parseInt(data.password2)) {
+      console.log(data);
+      methods.reset();
+      setSuccess(true);
+      setUnSuccess(false);
+    } else {
+      setSuccess(false);
+      setUnSuccess(true);
+      console.log("Las contraseñas no coinciden");
+      methods.reset();
+    }
   });
 
   return (
@@ -40,7 +53,13 @@ export const PasswordForm = () => {
         <div className="mt-5">
           {success && (
             <p className="d-flex align-items-center gap-1 mb-5 fw-semibold text-success">
-              <BsFillCheckSquareFill /> Form has been submitted successfully
+              <BsFillCheckSquareFill /> El formulario se envió con éxito.
+            </p>
+          )}
+          {unsuccess && (
+            <p className="d-flex align-items-center gap-1 mb-5 fw-semibold text-danger">
+              <BsFillCheckSquareFill /> Las contraseñas no coinciden, intente
+              nuevamente.
             </p>
           )}
           <button
@@ -48,7 +67,7 @@ export const PasswordForm = () => {
             className="d-flex align-items-center gap-1 p-2 fw-semibold text-light bg-primary rounded"
           >
             <GrMail />
-            Submit Form
+            Enviar
           </button>
         </div>
       </form>
