@@ -30,8 +30,8 @@ export const validateFields = (event) => {
     const successMessage = 'El usuario se ha creado con exito'
     const messageBox = <Message message={successMessage} error={false} />
     const userDataAutoGenerate = getNewUserData(formData)
-    return { messageBox, userDataAutoGenerate }
+    return { messageBox, userDataAutoGenerate, toValidate: false }
   }
   const errorMessage = 'Validar los campos'
-  return { messageBox: listOfErrors, userDataAutoGenerate: errorMessage }
+  return { messageBox: listOfErrors, userDataAutoGenerate: errorMessage, toValidate: true }
 }

@@ -5,12 +5,14 @@ import { FormElement } from './components/FormElement'
 
 export const EmployeeForm = () => {
   const [error, setError] = useState()
+  const [validate, setValidate] = useState()
   // Al enviar el formulario valida cada uno de los campos
   const onSubmit = (event) => {
     event.preventDefault()
-    const { messageBox, userDataAutoGenerate } = validateFields(event)
+    const { messageBox, userDataAutoGenerate, toValidate } = validateFields(event)
     console.log(userDataAutoGenerate)
     setError(messageBox)
+    setValidate(toValidate)
   }
   return (
     <div className={styles.employeeFormContainer}>
@@ -19,10 +21,7 @@ export const EmployeeForm = () => {
         <h3>Creación de Usuarios/Empleados</h3>
       </header>
       <main className={styles.main}>
-        <FormElement onSubmit={onSubmit} />
-        <section className={styles.messagesContainer}>
-          {error}
-        </section>
+        <FormElement onSubmit={onSubmit} listOfError={error} toValidate={validate} />
       </main>
     </div>
   )

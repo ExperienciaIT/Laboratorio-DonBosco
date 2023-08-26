@@ -1,6 +1,6 @@
 import styles from '../EmployeeForm.module.css'
 
-export const FormElement = ({ onSubmit }) => {
+export const FormElement = ({ onSubmit, listOfError, toValidate }) => {
   return (
     <form action='#' className={styles.form} onSubmit={onSubmit}>
       <div className={styles.fieldContainer}>
@@ -12,6 +12,7 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[0]}
       </div>
       <div className={styles.fieldContainer}>
         <label htmlFor='apellido' className={styles.labelDescription}>Apellido</label>
@@ -22,6 +23,7 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[1]}
       </div>
       <div className={`${styles.fieldContainer} ${styles.dniFieldContainer}`}>
         <label htmlFor='dni' className={styles.labelDescription}>DNI</label>
@@ -32,6 +34,7 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[2]}
       </div>
       <div className={`${styles.fieldContainer} ${styles.emailFieldContainer}`}>
         <label htmlFor='email' className={styles.labelDescription}>Correo Electrónico</label>
@@ -42,6 +45,7 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[3]}
       </div>
       <div className={styles.fieldContainer}>
         <label htmlFor='rol' className={styles.labelDescription}>Rol a Desempeñar</label>
@@ -52,6 +56,7 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[4]}
       </div>
       <div className={styles.fieldContainer}>
         <label htmlFor='area' className={styles.labelDescription}>Área de Trabajo</label>
@@ -62,10 +67,12 @@ export const FormElement = ({ onSubmit }) => {
           className={styles.input}
           required
         />
+        {toValidate && listOfError[5]}
       </div>
       <button type='submit' className={styles.btnSubmit}>
         Crear Usuario
       </button>
+      {toValidate === false && listOfError}
     </form>
   )
 }

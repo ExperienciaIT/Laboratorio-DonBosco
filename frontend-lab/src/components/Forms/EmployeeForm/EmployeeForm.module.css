@@ -93,17 +93,16 @@
 }
 
 /* Messages for the user */
+.messageContainer{
+    /* border: 1px solid green; */
+}
+
 .inputInCaseOfError{
-    border: 3px solid #990000eb;
+    color: #b70000eb;
+    margin: 0;
 }
 .inputInCaseOfSuccess{
-    border: 3px solid #009300;
-}
-
-.messagesContainer{
-    padding: 1em;
-}
-
-.message{
-    padding: .5em;
+    color: #009300;
+    margin: 0;
+    justify-self: center;
 }
