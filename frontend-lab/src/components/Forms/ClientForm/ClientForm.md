@@ -19,9 +19,9 @@
 
 2. Adicionalmente (computo automático):
 
-   - Fecha de creación de usuario.
-   - Nombre de quien crea el usuario.
-   - Edad.
+   - ✔ Fecha de creación de usuario.
+   - ✔ Nombre de quien crea el usuario.
+   - ✔ Edad.
 
 ## <font color="#efadff">Pasos y Tareas a Desarrollar</font>
 
@@ -37,15 +37,15 @@
 
 #### Adicionalmente
 
-- Fecha de creacion de usuario (registro automatico)
-- Nombre de quien crea el usuario (registro automatico)
-- Edad (calculo automático)
+- ✔ Fecha de creacion de usuario (registro automatico)
+- ✔ Nombre de quien crea el usuario (registro automatico)
+- ✔ Edad (calculo automático)
 
 #### Tareas
 
 - ✔ Verificar que los campos obligatorios estén presentes en el formulario
 - ✔ Validar que el campo de DNI acepte solo números y tenga un formato adecuado
-- Confirmar que el campo de correo electrónico tenga un formato válido
+- ✔ Confirmar que el campo de correo electrónico tenga un formato válido
 - ✔ Mostrarle el resultado de la validación al cliente mediante mensajes
 - ✔ Verificacion del formato de correo mediante regex
 

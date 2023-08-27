@@ -1,12 +1,20 @@
 import { useForm } from 'react-hook-form'
 import { Field } from './components/Field'
 import { validations } from './validations/validations'
+import { getUserDateCreation } from '../service/getUserDataCreation'
 import styles from './ClientForm.module.css'
 
 export const ClientForm = () => {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm()
+  const { register, handleSubmit, formState: { errors }, watch, reset } = useForm()
   const onSubmit = data => {
-    console.log(data)
+    const userDateCreation = getUserDateCreation()
+    const { year } = userDateCreation
+    const creator = 'secretaria'
+    const userYearBirthDate = new Date(watch('birthDate')).getFullYear()
+    const patientAge = year - userYearBirthDate
+
+    const userData = { userDateCreation, creator, patientAge }
+    console.log(userData, data)
     reset()
   }
 
@@ -72,7 +80,7 @@ export const ClientForm = () => {
         validations={validations.medicalInsurancePremium}
         errors={errors.medicalInsurancePremium}
         placeholder='Obra social, prepaga, particular'
-        label='Prestador de Servicio Medico'
+        label='Prestador de Servicio Médico'
       />
       <Field
         register={register}
@@ -81,7 +89,7 @@ export const ClientForm = () => {
         validations={validations.numberMember}
         errors={errors.numberMember}
         placeholder='123456789012/00'
-        label='Numero de Afiliado'
+        label='Número de Afiliado'
       />
       <input type='submit' className={styles.button} />
     </form>

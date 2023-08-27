@@ -1,7 +1,7 @@
 import styles from '../ClientForm.module.css'
 
 export const Field = ({ register, fieldName, validations, label, errors, placeholder, type }) => {
-  const cssBorder = errors?.type === 'required' ? `${styles.inputInCaseOfError}` : ''
+  const cssBorder = errors?.type !== undefined ? `${styles.inputInCaseOfError}` : ''
 
   return (
     <div className={styles.fieldContainer}>
@@ -17,6 +17,11 @@ export const Field = ({ register, fieldName, validations, label, errors, placeho
         className={`${cssBorder} ${styles.input}`}
         {...register(fieldName, validations)}
       />
+      <p
+        className={styles.userMessage}
+      >
+        {errors?.message}
+      </p>
     </div>
   )
 }

@@ -1,7 +1,11 @@
+p{
+    margin: 0;
+}
+
 .formContainer{
-    width: 20em;
-    background: rgb(58, 58, 196);
-    padding: 1em;
+    width: 25em;
+    background: rgba(0, 0, 0, .5);
+    padding: 2em;
 }
 
 .fieldContainer{
@@ -17,8 +21,18 @@
     padding: .25em;
 }
 
+.input:focus,
+.input:focus-visible{
+    outline: none;
+}
+
 .inputInCaseOfError{
     border: 1px solid red;
+}
+
+.userMessage{
+    color: tomato;
+    font-size: x-small;
 }
 
 .button{
