@@ -1,20 +1,19 @@
-import styles from '../ClientForm.module.css'
+// Estilos generales del formulario
+import styles from '../styles/Form.module.css'
 
 export const Field = ({ register, fieldName, validations, label, errors, placeholder, type }) => {
-  const cssBorder = errors?.type !== undefined ? `${styles.inputInCaseOfError}` : ''
-
   return (
     <div className={styles.fieldContainer}>
       <label
         htmlFor={fieldName}
-        className={styles.label}
+        className={styles.labelDescription}
       >
         {label}
       </label>
       <input
         type={type}
         placeholder={placeholder}
-        className={`${cssBorder} ${styles.input}`}
+        className={styles.input}
         {...register(fieldName, validations)}
       />
       <p

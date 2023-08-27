@@ -98,5 +98,29 @@ export const validations = {
       value: 10,
       message: 'Debe contener mínimo 10 numeros'
     }
+  },
+  // Area de trabajo del nuevo empleado
+  workArea: {
+    required: {
+      value: true,
+      message: 'Campo requerido'
+    },
+    minLength: {
+      value: 5,
+      message: 'Debe contenedor mínimo 5 caracteres'
+    },
+    validate: value => { return isNaN(value) || 'No debe ser un número' }
+  },
+  // Rol del nuevo empleado
+  role: {
+    required: {
+      value: true,
+      message: 'Campo requerido'
+    },
+    minLength: {
+      value: 5,
+      message: 'Debe contenedor mínimo 5 caracteres'
+    },
+    validate: value => { return isNaN(value) || 'No debe ser un número' }
   }
 }

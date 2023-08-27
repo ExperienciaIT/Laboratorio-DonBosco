@@ -1,8 +1,9 @@
 import { useForm } from 'react-hook-form'
-import { Field } from './components/Field'
-import { validations } from './validations/validations'
+import { Field } from '../components/Field'
+import { validations } from '../validations/validations'
 import { getUserDateCreation } from '../service/getUserDataCreation'
-import styles from './ClientForm.module.css'
+// Estilos generales del formulario
+import styles from '../styles/Form.module.css'
 
 export const ClientForm = () => {
   const { register, handleSubmit, formState: { errors }, watch, reset } = useForm()
@@ -19,7 +20,7 @@ export const ClientForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.formContainer}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <Field
         register={register}
         fieldName='name'
@@ -91,7 +92,7 @@ export const ClientForm = () => {
         placeholder='123456789012/00'
         label='Número de Afiliado'
       />
-      <input type='submit' className={styles.button} />
+      <input type='submit' className={styles.btnSubmit} />
     </form>
   )
 }

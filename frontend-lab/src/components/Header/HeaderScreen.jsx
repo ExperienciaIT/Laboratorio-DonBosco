@@ -29,11 +29,6 @@ export const HeaderScreen = () => {
                 />
               </li>
               <li className='nav-item'>
-                <NavLink to='/admin' className='nav-link'>
-                  Admin
-                </NavLink>
-              </li>
-              <li className='nav-item'>
                 <NavLink to='/about' className='nav-link'>
                   Nosotros
                 </NavLink>

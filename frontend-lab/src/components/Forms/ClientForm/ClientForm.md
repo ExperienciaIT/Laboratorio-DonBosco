@@ -9,19 +9,19 @@
 
 1. Para la creación de los pacientes, se debe habilitar un formulario que solicite la siguiente información:
 
-   - ✔ Nombres y apellidos completos.
-   - ✔ Documento Nacional de Identidad (DNI).
-   - ✔ Fecha de nacimiento.
-   - ✔ Dirección actual de residencia.
-   - ✔ Correo electrónico (Para recibir sus notificaciones y resultados).
-   - ✔ Prestador (Obra social, prepaga o particular)
-   - ✔ Número de afiliado
+   - Nombres y apellidos completos.
+   - Documento Nacional de Identidad (DNI).
+   - Fecha de nacimiento.
+   - Dirección actual de residencia.
+   - Correo electrónico (Para recibir sus notificaciones y resultados).
+   - Prestador (Obra social, prepaga o particular)
+   - Número de afiliado
 
 2. Adicionalmente (computo automático):
 
-   - ✔ Fecha de creación de usuario.
-   - ✔ Nombre de quien crea el usuario.
-   - ✔ Edad.
+   - Fecha de creación de usuario.
+   - Nombre de quien crea el usuario.
+   - Edad.
 
 ## <font color="#efadff">Pasos y Tareas a Desarrollar</font>
 

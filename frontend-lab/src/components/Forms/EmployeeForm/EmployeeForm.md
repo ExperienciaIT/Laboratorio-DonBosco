@@ -42,9 +42,9 @@
 - ✔ Validar que el campo de DNI acepte solo números y tenga un formato adecuado
 - ✔ Confirmar que el campo de correo electrónico tenga un formato válido
 - ✔ Mostrarle el resultado de la validación al cliente mediante mensajes
-- Verificacion del formato de correo mediante regex
+- ✔ Verificacion del formato de correo mediante regex
 - ✔ Generar automaticamente un nombre de usuario y contraseña
-- Enviar los datos al correo del nuevo empleado (Framework Resent - Necesidad de una API-KEY)
+- ✔ Enviar los datos al correo del nuevo empleado (se encargó backend)
 - Permitir la actualización de roles y detalles de usuario
 - Control de inactivación de usuarios que ya no trabajan en el laboratorio
 
@@ -52,11 +52,11 @@
 
 - ✔ Validar la cantidad de caracteres mínima para cada campo
 - ✔ Al crear el usuario mostrar mensaje de éxito o error en el mismo componente.
-- Mediante un estado cambiar la funcionalidad del boton para que vuelva a cargar otro usuario
+- ✔ Mediante un estado cambiar la funcionalidad del boton para que vuelva a cargar otro usuario
 
 ## <font color="#efadff">Casos de Prueba - Testing</font>
 
-- ✔ Escenario de Prueba 1:
+- Escenario de Prueba 1:
 
   > El sistema registra la información correctamente y muestra un mensaje de confirmación de la creación del usuario.
 
