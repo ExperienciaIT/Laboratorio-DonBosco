@@ -1,0 +1,26 @@
+.formContainer{
+    width: 20em;
+    background: rgb(58, 58, 196);
+    padding: 1em;
+}
+
+.fieldContainer{
+    padding: .25em 0;
+}
+
+.input,
+.label{
+    width: 100%;
+}
+
+.input{
+    padding: .25em;
+}
+
+.inputInCaseOfError{
+    border: 1px solid red;
+}
+
+.button{
+    width: 100%;
+}

@@ -1,5 +1,10 @@
+import { ClientForm } from '../Forms/ClientForm/ClientForm'
+
 export const ClientScreen = () => {
   return (
-    <div>ClientScreen</div>
+    <>
+      <h2>Formulario Registro de Pacientes</h2>
+      <ClientForm />
+    </>
   )
 }
