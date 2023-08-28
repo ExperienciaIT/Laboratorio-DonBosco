@@ -1,5 +1,5 @@
 export const Schedule = () => {
   return (
-    <p>Schedule Screen</p>
+    <p>Pantalla Horarios</p>
   )
 }

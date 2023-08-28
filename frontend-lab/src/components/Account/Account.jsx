@@ -1,5 +1,5 @@
 export const Account = () => {
   return (
-    <p>Account Screen</p>
+    <p>Pantalla Mi Cuenta</p>
   )
 }

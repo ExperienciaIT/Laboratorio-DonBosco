@@ -5,7 +5,7 @@ import { Account } from './components/Account/Account'
 import { AboutScreen } from './components/About/AboutScreen'
 import { Schedule } from './components/Schedule/Schedule'
 import { ServiceScreen } from './components/LabServices/ServiceScreen'
-import { ToAdress } from './components/ToAddress/ToAddress'
+import { ToHomeAdress } from './components/ToHomeAddress/ToHomeAddress'
 import { MedicalInsurancePremium } from './components/MedicalInsurancePremium/MedicalInsurancePremium'
 
 function App () {
@@ -19,7 +19,7 @@ function App () {
           <Route path='/about' element={<AboutScreen />} />
           <Route path='/schedule' element={<Schedule />} />
           <Route path='/medical-tests' element={<ServiceScreen />} />
-          <Route path='/to-address' element={<ToAdress />} />
+          <Route path='/to-address' element={<ToHomeAdress />} />
           <Route path='/medicalInsurancePremium' element={<MedicalInsurancePremium />} />
         </Routes>
       </main>

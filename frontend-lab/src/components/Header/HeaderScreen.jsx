@@ -6,6 +6,7 @@ import styles from './HeaderScreen.module.css'
 
 export const HeaderScreen = () => {
   const [labOptions, setLabOptions] = useState(false)
+  const [premiumOptions, setPremiumOptions] = useState(false)
   return (
     <header className={styles.header}>
       <NavLink to='/' className={styles.logoContainer}>
@@ -31,8 +32,22 @@ export const HeaderScreen = () => {
                 <NavLink to='/to-address' className={styles.navLink}>A domicilio</NavLink>
               </NavOptions>}
           </li>
-          <li>
-            <NavLink to='/medicalInsurancePremium' className={styles.navLink}>Obras Sociales y Prepagas</NavLink>
+          <li
+            onMouseEnter={() => { setPremiumOptions(true) }}
+            onMouseLeave={() => { setPremiumOptions(false) }}
+            className={styles.navLink}
+          >
+            Obras Sociales y Prepagas
+            {premiumOptions &&
+              <NavOptions>
+                <NavLink className={styles.navLink}>Galeno</NavLink>
+                <NavLink className={styles.navLink}>Medife</NavLink>
+                <NavLink className={styles.navLink}>Medicus</NavLink>
+                <NavLink className={styles.navLink}>Medimas</NavLink>
+                <NavLink className={styles.navLink}>OSECAC</NavLink>
+                <NavLink className={styles.navLink}>Swiss Medical</NavLink>
+                <NavLink className={styles.navLink}>PAMI</NavLink>
+              </NavOptions>}
           </li>
         </ul>
       </nav>
