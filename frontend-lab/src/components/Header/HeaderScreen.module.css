@@ -1,0 +1,25 @@
+.header{
+    padding: .75em 0;
+    background: rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+}
+
+.logoContainer,
+.navLink{
+    background: rgba(0, 0, 0, .5);
+    padding: .25em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+.logoContainer,
+.listOfLinks,
+.navLink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
