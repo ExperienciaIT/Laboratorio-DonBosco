@@ -8,6 +8,8 @@ p{
 }
 
 .form{
+    width: 40vw;
+    margin: 0 auto;
     border-radius: 2rem;
     padding: 2em;
     background: rgba(0, 0, 0, .5);

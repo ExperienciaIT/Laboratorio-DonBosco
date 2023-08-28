@@ -1,28 +1,38 @@
-import { Routes, Route } from "react-router-dom";
-import { HeaderScreen } from "./components/Header/HeaderScreen";
-import { Home } from "./components/Home/Home";
-import { AboutScreen } from "./components/About/AboutScreen";
-import { ClientScreen } from "./components/LabClients/ClientScreen";
-import { ServiceScreen } from "./components/LabServices/ServiceScreen";
-import { EmployeeScreen } from "./components/LabEmployees/EmployeeScreen";
-/* imports temporales */
-import { LoginScreen } from "./components/Login/LoginScreen";
-import { PasswordScreen } from "./components/Password/PasswordScreen";
+import { Routes, Route } from 'react-router-dom'
+import { HeaderScreen } from './components/Header/HeaderScreen'
+import { Home } from './components/Home/Home'
+// Panel Mi Cuenta
+import { Account } from './components/Account/Account'
+// Panel Laboratorio
+import { AboutScreen } from './components/About/AboutScreen'
+import { Schedule } from './components/Schedule/Schedule'
+import { ServiceScreen } from './components/LabServices/ServiceScreen'
+import { ToHomeAdress } from './components/ToHomeAddress/ToHomeAddress'
+// Panel Formularios
+import { EmployeeScreen } from './components/LabEmployees/EmployeeScreen'
+import { ClientScreen } from './components/LabClients/ClientScreen'
+import { LoginScreen } from './components/Login/LoginScreen'
+import { PasswordScreen } from './components/Password/PasswordScreen'
 
 function App () {
   return (
     <>
       <HeaderScreen />
-      <main className='page'>
+      <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/about" element={<AboutScreen />}></Route>
-          <Route path="/services" element={<ServiceScreen />}></Route>
-          <Route path="/clients" element={<ClientScreen />}></Route>
-          <Route path="/employees" element={<EmployeeScreen />}></Route>
-          {/* Rutas para visibilizar los formularios, todavia no hay rutas protegidas !! */}
-          <Route path="/login" element={<LoginScreen />}></Route>
-          <Route path="/password" element={<PasswordScreen />}></Route>
+          <Route path='/' element={<Home />} />
+          {/* Panel Mi Cuenta */}
+          <Route path='/account' element={<Account />} />
+          {/* Panel Laboratorio */}
+          <Route path='/about' element={<AboutScreen />} />
+          <Route path='/schedule' element={<Schedule />} />
+          <Route path='/medical-tests' element={<ServiceScreen />} />
+          <Route path='/to-address' element={<ToHomeAdress />} />
+          {/* Panel Formularios */}
+          <Route path='/employeeForm' element={<EmployeeScreen />} />
+          <Route path='/clientForm' element={<ClientScreen />} />
+          <Route path='/login' element={<LoginScreen />} />
+          <Route path='/password' element={<PasswordScreen />} />
         </Routes>
       </main>
     </>

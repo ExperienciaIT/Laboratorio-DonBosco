@@ -7,6 +7,10 @@
     gap: 2em;
 }
 
+.logoContainer > h1{
+    padding: .15em 0;
+}
+
 .logoContainer,
 .navLink{
     background: rgba(0, 0, 0, .5);

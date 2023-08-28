@@ -1,13 +1,11 @@
-import styles from "./LoginScreen.module.css";
-import { LoginForm } from "../Forms/LoginForm/LoginForm";
+import styles from './LoginScreen.module.css'
+import { LoginForm } from '../Forms/LoginForm/LoginForm'
 
 export const LoginScreen = () => {
   return (
-    <>
-      <div className={styles.title}>
-        <h1 className="mb-5">Login</h1>
-      </div>
+    <section className={styles.formContainer}>
+      <h2 className='mb-5'>Pantalla de Inicio de Sesión</h2>
       <LoginForm />
-    </>
-  );
-};
+    </section>
+  )
+}

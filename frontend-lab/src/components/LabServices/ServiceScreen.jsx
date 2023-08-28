@@ -1,5 +1,5 @@
 export const ServiceScreen = () => {
   return (
-    <div>ServiceScreen</div>
+    <h2>Pantalla Servicios</h2>
   )
 }
