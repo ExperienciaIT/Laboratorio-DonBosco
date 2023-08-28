@@ -30,6 +30,7 @@
 - ✔ Nombres y apellidos
 - ✔ DNI
 - ✔ Fecha de nacimientto
+- Celular
 - ✔ Dirección actual de residencia
 - ✔ Correo electrónico
 - ✔ Prestador
